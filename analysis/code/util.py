@@ -58,7 +58,33 @@ def get_brain_status_spreadsheet():
     return df
 
 
-
+class brain:
+    name = ""
+    df = pd.DataFrame
+    def __init__(self, name: str, data: pd.DataFrame):
+        """
+        This function excpects a pandas dataframe as input. Specifically,
+        it needs the dataframe that has the region counts for a brain. It
+        also takes in a name parameters so that we can identify brains. 
+        
+        TO DO: ADD POINTER ELEMENTS
+        """
+        self.name = name
+        self.df = data
+        
+    
+    
+class brain_graph(nx.Graph):
+    graph_type = ""
+    metric = None
+    def __init__(graph_type:str = "epsilon"):
+        """
+        To do, implement the metric. Implement epsilon
+        ball edge creation. Implement Laplaussian (all three types) and the
+        eigenvalues of the laplaussian. 
+        """
+        self.graph_type = graph_type
+    
 
 
 
